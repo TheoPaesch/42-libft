@@ -6,7 +6,7 @@
 /*   By: tpaesch <tpaesch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 14:51:55 by tpaesch           #+#    #+#             */
-/*   Updated: 2023/10/14 17:21:09 by tpaesch          ###   ########.fr       */
+/*   Updated: 2023/10/15 13:14:28 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,7 @@ void	*ft_memchr(const void *s, int c, size_t n);
 void	*ft_calloc(size_t count, size_t size);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	ft_putstr_fd(char *s, int fd);
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+char	*ft_strrchr(const char *s, int c);
 
 #endif
