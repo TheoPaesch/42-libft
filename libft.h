@@ -6,7 +6,7 @@
 /*   By: tpaesch <tpaesch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 14:51:55 by tpaesch           #+#    #+#             */
-/*   Updated: 2023/10/16 18:39:19 by tpaesch          ###   ########.fr       */
+/*   Updated: 2023/10/16 21:22:10 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_putendl_fd(char *s, int fd);
 char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_itoa(int n);
 
 #endif
