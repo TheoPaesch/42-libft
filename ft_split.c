@@ -6,7 +6,7 @@
 /*   By: tpaesch <tpaesch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 13:33:57 by tpaesch           #+#    #+#             */
-/*   Updated: 2023/10/24 14:46:04 by tpaesch          ###   ########.fr       */
+/*   Updated: 2023/10/24 17:12:24 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,12 +47,13 @@ static size_t	wordlen(const char *s, char c, int *i)
 	return (j);
 }
 
-static void	free_all(char **test, size_t arnb)
+static void	free_all(char **test)
 {
-	while (arnb != 0)
+	int i = 0;
+	while (test && test[i] != NULL)
 	{
-		free(test[arnb]);
-		arnb--;
+		free(test[i]);
+		i++;
 	}
 	free(test);
 }
@@ -76,10 +77,14 @@ char	**ft_split(char const *s, char c)
 	while (arnb < (unsigned long)w)
 	{
 		j = wordlen(s, c, &i);
+		
 		test[arnb] = ft_substr(s, (i - j), j);
-		if (!test[arnb])
-			free_all(test, arnb - 1);
+		if (!test[arnb]) {
+			free_all(test);
+			return (NULL);
+		}
 		arnb++;
+
 	}
 	test[arnb] = NULL;
 	return (test);
