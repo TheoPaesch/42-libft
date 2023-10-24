@@ -6,12 +6,11 @@
 /*   By: tpaesch <tpaesch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 13:33:57 by tpaesch           #+#    #+#             */
-/*   Updated: 2023/10/24 13:20:39 by tpaesch          ###   ########.fr       */
+/*   Updated: 2023/10/24 17:14:03 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static void	helper(size_t *len, unsigned int *start, const char *s)
 {
