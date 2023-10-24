@@ -6,7 +6,7 @@
 /*   By: tpaesch <tpaesch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 13:33:57 by tpaesch           #+#    #+#             */
-/*   Updated: 2023/10/15 19:45:04 by tpaesch          ###   ########.fr       */
+/*   Updated: 2023/10/21 15:37:36 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,15 @@ char	*ft_strtrim(char const *s1, char const *set)
 	i = 0;
 	start = 0;
 	end = ft_strlen(s1);
+	if (end == 0)
+		return (ft_calloc(1, 1));
 	while (s1[start] != '\0' && ft_strchr(set, s1[start]) != NULL)
 		start++;
 	while (end > start && ft_strchr(set, s1[end]) != NULL)
 		end--;
 	arnold = malloc(((end - start) + 2) * sizeof(char));
 	if (arnold == NULL)
-		return (arnold);
+		return (NULL);
 	while (start <= end)
 		arnold[i++] = s1[start++];
 	arnold[i] = '\0';

@@ -6,7 +6,7 @@
 /*   By: tpaesch <tpaesch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 13:33:57 by tpaesch           #+#    #+#             */
-/*   Updated: 2023/10/14 17:25:41 by tpaesch          ###   ########.fr       */
+/*   Updated: 2023/10/24 12:45:50 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_putstr_fd(char *s, int fd)
 	int	i;
 
 	i = 0;
+	if (s == NULL)
+		return ;
 	while (s[i] != '\0')
 	{
 		write (fd, &s[i], 1);

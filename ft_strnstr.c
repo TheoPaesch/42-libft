@@ -6,7 +6,7 @@
 /*   By: tpaesch <tpaesch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 15:02:43 by tpaesch           #+#    #+#             */
-/*   Updated: 2023/10/15 13:02:14 by tpaesch          ###   ########.fr       */
+/*   Updated: 2023/10/24 12:42:41 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	i;
 	size_t	j;
 
+	if (len == 0 && (haystack == NULL || needle == NULL))
+		return (NULL);
 	i = 0;
 	if (needle[i] == '\0')
 		return ((char *)haystack);

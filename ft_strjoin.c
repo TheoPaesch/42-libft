@@ -6,7 +6,7 @@
 /*   By: tpaesch <tpaesch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 13:33:57 by tpaesch           #+#    #+#             */
-/*   Updated: 2023/10/16 18:39:00 by tpaesch          ###   ########.fr       */
+/*   Updated: 2023/10/24 12:51:32 by tpaesch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		j;
 	char	*go;
 
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
 	j = 0;
 	i = 0;
 	go = malloc (ft_strlen(s1) + ft_strlen(s2) + 1);
